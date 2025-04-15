@@ -1,15 +1,12 @@
 ﻿using System;
 
-namespace ScriptableLovers.Runtime
+[AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
+public class ScriptableObjectPathAttribute : Attribute
 {
-    [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-    public class ScriptableObjectPathAttribute : Attribute
-    {
-        public string Path { get; }
+    public string Path { get; }
 
-        public ScriptableObjectPathAttribute(string path)
-        {
-            Path = path;
-        }
+    public ScriptableObjectPathAttribute(string path)
+    {
+        Path = path;
     }
 }
