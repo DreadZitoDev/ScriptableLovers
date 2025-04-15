@@ -1,6 +1,6 @@
 {
     "name": "com.scriptablelovers.scriptablelovers",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "displayName": "ScriptableLovers™",
     "description": "A powerful tool for working with ScriptableObjects in Unity, making them easier to create, manage, and love.",
     "unity": "2019.4",

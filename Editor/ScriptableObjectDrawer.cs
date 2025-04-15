@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DreadZitoTools.ScriptableLovers;
 using UnityEditor;
 using UnityEngine;
 
@@ -65,6 +66,7 @@ namespace ScriptableLovers.Editor
             {
                 path = pathAttribute.Path;
 
+                Debug.Log($"Attribute path: {path}");
                 if (!AssetDatabase.IsValidFolder(path))
                 {
                     //Debug.LogWarning($"This path isn't valid: {path}, opening selecting window");
@@ -80,12 +82,12 @@ namespace ScriptableLovers.Editor
                     "CHOOSE LOCATION (AVOID THIS BY ADDING ScriptableObjectPath Attribute TO THE SO CLASS)",
                     assetName,
                     "asset",
-                    "Selecciona la ubicación para guardar el nuevo ScriptableObject"
+                    "Select the location to save the new ScriptableObject"
                 );
 
                 if (string.IsNullOrEmpty(savePath))
                 {
-                    Debug.LogWarning("No se seleccionó una ubicación para el nuevo ScriptableObject.");
+                    Debug.LogWarning("No location was selected for the new ScriptableObject.");
                     return; // Si el usuario cancela, salimos del método
                 }
 
